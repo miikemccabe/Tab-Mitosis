@@ -1,0 +1,11 @@
+<script	type="text/javascript">
+
+var isAltPressed = false;
+
+chrome.tabs.onDetached.addListener(function(tabId, info){
+	chrome.tabs.get(tabId, function(tab) {
+		chrome.tabs.create({windowId : info.oldWindowId, index : info.oldPosition, url : tab.url});
+	});
+});
+
+</script>

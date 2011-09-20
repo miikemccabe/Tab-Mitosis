@@ -1,0 +1,11 @@
+{
+    "name": "Mitabsis",
+    "version": "1.0",
+    "description": "Allows you to pull a tab from a window without removing it from that window.",
+    "permissions": [
+    	"tabs",
+    	"http://*/*", 
+    	"https://*/*"
+    ],
+    "background_page": "background.html"
+}
