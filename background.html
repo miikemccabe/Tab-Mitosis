@@ -1,7 +1,9 @@
 <script	type="text/javascript">
 
+var id;
+
 chrome.tabs.onDetached.addListener(function(tabId, info){
-	var id = tabId;
+	id = tabId;
 	chrome.tabs.get(id, function(tab) {
 		chrome.tabs.create({windowId : info.oldWindowId, index : info.oldPosition, url : tab.url});
 	});
